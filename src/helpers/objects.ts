@@ -45,3 +45,8 @@ export function sortDeepKeys<T>(input: T): T {
 
   return input;
 }
+
+/** @description Removes duplicates from an array. */
+export function dedupe<T>(arr: T[]) {
+  return Array.from(new Set(arr));
+}

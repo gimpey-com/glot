@@ -20,6 +20,7 @@ const minimal = {
   main: "cli.cjs",
   bin: { gglot: "cli.cjs" },
   publishConfig: { access: "public" },
+  repository: root.repository,
   engines: root.engines,
 };
 

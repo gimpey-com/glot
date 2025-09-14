@@ -41,6 +41,8 @@ import {
   writeJSON,
 } from "./helpers";
 
+declare const __GGLOT_VERSION__: string;
+
 // ! ===========================================================================
 // ! CONFIG
 // ! ===========================================================================
@@ -53,7 +55,7 @@ const CACHE_FILENAME = ".translation-cache.json";
 
 const LOCALE_DIR_RE = /^[A-Za-z]{2}(?:[-_][A-Za-z]{2})?$/;
 
-const VERSION = "0.0.1";
+const VERSION = __GGLOT_VERSION__;
 
 const opts = parseOrExit(
   process.argv.slice(2),

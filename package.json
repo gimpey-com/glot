@@ -22,14 +22,12 @@
     "clean": "rm -rf dist",
     "build": "node scripts/build.mjs && node scripts/prepare-dist.mjs",
     "prepublishOnly": "yarn build",
-    "bump-version": "node scripts/bump-version.mjs",
     "test": "yarn build && node --test tests/*.test.js",
     "prepare": "yarn build"
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com",
-    "directory": "dist"
+    "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
     "inquirer": "^12.9.4",

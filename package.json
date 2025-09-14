@@ -1,6 +1,6 @@
 {
   "name": "@gimpey-com/glot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A CLI for processing i18n keys and translations across multiple languages.",
   "author": "gimpey <gimpey@gimpey.com> (https://gimpey.com)",
   "license": "Apache-2.0",

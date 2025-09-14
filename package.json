@@ -23,7 +23,8 @@
     "build": "node scripts/build.mjs && node scripts/prepare-dist.mjs",
     "prepublishOnly": "yarn build",
     "test": "yarn build && node --test tests/*.test.js",
-    "prepare": "yarn build"
+    "prepare": "yarn build",
+    "publish": "./publish.sh"
   },
   "publishConfig": {
     "access": "public",

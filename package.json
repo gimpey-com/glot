@@ -2,19 +2,32 @@
   "name": "@gimpey-com/glot",
   "version": "0.0.0",
   "description": "A CLI for processing i18n keys and translations across multiple languages.",
-  "main": "dist/cli.js",
-  "types": "dist/cli.d.ts",
+  "author": "gimpey <gimpey@gimpey.com> (https://gimpey.com)",
+  "license": "Apache-2.0",
+  "bin": {
+    "gglot": "dist/cli.cjs"
+  },
+  "main": "dist/cli.cjs",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gimpey-com/glot.git#main"
   },
-  "author": "gimpey <gimpey@gimpey.com> (https://gimpey.com)",
-  "license": "Apache-2.0",
   "scripts": {
-    "build": "tsc",
     "clean": "rm -rf dist",
-    "bump-version": "node scripts/bump-version.js",
-    "test": "cross-env NODE_ENV=test jest --coverage"
+    "build": "node scripts/build.mjs",
+    "prepublishOnly": "yarn build",
+    "bump-version": "node scripts/bump-version.mjs",
+    "test": "yarn build && node --test tests/*.test.js",
+    "prepare": "yarn build"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "inquirer": "^12.9.4",
@@ -22,6 +35,7 @@
   },
   "devDependencies": {
     "@types/node": "^24.3.1",
+    "esbuild": "^0.25.9",
     "typescript": "^5"
   },
   "packageManager": "yarn@4.9.4"

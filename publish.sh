@@ -31,12 +31,12 @@ yarn clean
 yarn build
 
 # Preview the tarball contents.
-npm pack --dry-run
+npm pack dist --dry-run
 
 if [[ -n "${OTP_ARG}" ]]; then
-  npm publish --access public ${OTP_ARG}
+  npm publish dist --access public ${OTP_ARG}
 else
-  npm publish --access public
+  npm publish dist --access public
 fi
 
 git push --follow-tags

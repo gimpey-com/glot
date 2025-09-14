@@ -1,4 +1,4 @@
-# 📜 Glot
+# 📜 Glot by Gimpey
 
 ![Gimpey Generic Banner](https://cdn.gimpey.com/.github/gimpey-com-generic-banner.png)
 

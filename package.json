@@ -20,7 +20,7 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "node scripts/build.mjs",
+    "build": "node scripts/build.mjs && node scripts/prepare-dist.mjs",
     "prepublishOnly": "yarn build",
     "bump-version": "node scripts/bump-version.mjs",
     "test": "yarn build && node --test tests/*.test.js",
@@ -38,5 +38,8 @@
     "esbuild": "^0.25.9",
     "typescript": "^5"
   },
-  "packageManager": "yarn@4.9.4"
+  "packageManager": "yarn@4.9.4",
+  "engines": {
+    "node": ">=18"
+  }
 }

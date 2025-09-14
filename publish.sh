@@ -15,7 +15,7 @@ if [[ -z "${BUMP}" || ! "${BUMP}" =~ ^--(patch|minor|major)$ ]]; then
 fi
 
 # Performing the following safety checks.
-git diff --quiet || { echo "✗ Uncommitted changes. Commit or stash first."; exit 1; }
+git diff --quiet || { echo "Uncommitted changes. Commit or stash first."; exit 1; }
 git fetch -q
 CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 [[ "${CURRENT_BRANCH}" == "main" ]] || {

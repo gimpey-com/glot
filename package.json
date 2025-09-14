@@ -27,7 +27,9 @@
     "prepare": "yarn build"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com",
+    "directory": "dist"
   },
   "dependencies": {
     "inquirer": "^12.9.4",
